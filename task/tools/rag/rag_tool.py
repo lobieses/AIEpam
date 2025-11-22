@@ -94,7 +94,7 @@ class RagTool(BaseTool):
         # 15. Append content to stage: "## RAG Request: \n"
         # 16. Append content to stage: `ff"```text\n\r{augmented_prompt}\n\r```\n\r"` (will be shown as markdown text)
         # 17. Append content to stage: "## Response: \n"
-        # 18. Now make Generation with AsyncDial, provide LLM with system prompt and augmented prompt and:
+        # 18. Now make Generation with AsyncDial (don't forget about api_version '025-01-01-preview, provide LLM with system prompt and augmented prompt and:
         #   - stream response to stage (user in real time will be able to see what the LLM responding while Generation step)
         #   - collect all content (we need to return it as tool execution result)
         # 19. return collected content
